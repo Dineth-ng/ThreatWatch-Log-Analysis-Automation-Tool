@@ -1,0 +1,46 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:08:02.811430 2026] [mpm_prefork:notice] [pid 4678:tid 4678] AH00163: Apache/2.4.66 (Debian) configured -- resuming normal operations
+[Sat May 30 20:08:02.811472 2026] [core:notice] [pid 4678:tid 4678] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat May 30 20:38:09.676086 2026] [mpm_prefork:notice] [pid 4678:tid 4678] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:38:11.573098 2026] [mpm_prefork:notice] [pid 94410:tid 94410] AH00163: Apache/2.4.67 (Debian) configured -- resuming normal operations
+[Sat May 30 20:38:11.573160 2026] [core:notice] [pid 94410:tid 94410] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat May 30 20:40:35.852398 2026] [mpm_prefork:notice] [pid 94410:tid 94410] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:40:35.953719 2026] [mpm_prefork:notice] [pid 102919:tid 102919] AH00163: Apache/2.4.67 (Debian) configured -- resuming normal operations
+[Sat May 30 20:40:35.953785 2026] [core:notice] [pid 102919:tid 102919] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:08:02.811430 2026] [mpm_prefork:notice] [pid 4678:tid 4678] AH00163: Apache/2.4.66 (Debian) configured -- resuming normal operations
+[Sat May 30 20:08:02.811472 2026] [core:notice] [pid 4678:tid 4678] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat May 30 20:38:09.676086 2026] [mpm_prefork:notice] [pid 4678:tid 4678] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:38:11.573098 2026] [mpm_prefork:notice] [pid 94410:tid 94410] AH00163: Apache/2.4.67 (Debian) configured -- resuming normal operations
+[Sat May 30 20:38:11.573160 2026] [core:notice] [pid 94410:tid 94410] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat May 30 20:40:35.852398 2026] [mpm_prefork:notice] [pid 94410:tid 94410] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+mprotect() failed [13] Permission denied
+[Sat May 30 20:40:35.953719 2026] [mpm_prefork:notice] [pid 102919:tid 102919] AH00163: Apache/2.4.67 (Debian) configured -- resuming normal operations
+[Sat May 30 20:40:35.953785 2026] [core:notice] [pid 102919:tid 102919] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
