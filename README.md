@@ -1,10 +1,17 @@
-# ThreatWatch - Log Analysis Automation Tool
+:::writing{variant="document" id="48291"}
+### ThreatWatch - Log Analysis & Security Monitoring Tool
 
----
+## Overview
 
-##  Project Overview
+ThreatWatch is a lightweight Python-based log analysis tool designed for SOC (Security Operations Center) practice and cybersecurity learning.
 
-In a production environment, a company website or server receives thousands of requests every day. Manually sorting through these logs to find malicious activity is incredibly time-consuming and inefficient. 
+It parses Apache, Nginx, and firewall logs to detect common attack patterns such as:
+
+🔐 Brute Force Login Attempts
+📂 Directory Traversal Attacks
+🌐 Port Scanning Activity
+
+The tool generates structured JSON security alerts with severity levels for easier monitoring and automation.
 
 For example, raw logs might look like this:
 ```text
