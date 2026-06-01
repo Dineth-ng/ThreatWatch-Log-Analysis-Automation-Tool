@@ -1,7 +1,6 @@
 # sample Apache log file:
 
-logfile = """
-54.36.149.41 - - [22/Jan/2019:03:56:14 +0330] "GET /filter/27|13%20%D9%85%DA%AF%D8%A7%D9%BE%DB%8C%DA%A9%D8%B3%D9%84,27|%DA%A9%D9%85%D8%AA%D8%B1%20%D8%A7%D8%B2%205%20%D9%85%DA%AF%D8%A7%D9%BE%DB%8C%DA%A9%D8%B3%D9%84,p53 HTTP/1.1" 200 30577 "-" "Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)" "-"
+logfile = """54.36.149.41 - - [22/Jan/2019:03:56:14 +0330] "GET /filter/27|13%20%D9%85%DA%AF%D8%A7%D9%BE%DB%8C%DA%A9%D8%B3%D9%84,27|%DA%A9%D9%85%D8%AA%D8%B1%20%D8%A7%D8%B2%205%20%D9%85%DA%AF%D8%A7%D9%BE%DB%8C%DA%A9%D8%B3%D9%84,p53 HTTP/1.1" 200 30577 "-" "Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)" "-"
 31.56.96.51 - - [22/Jan/2019:03:56:16 +0330] "GET /image/60844/productModel/200x200 HTTP/1.1" 200 5667 "https://www.zanbil.ir/m/filter/b113" "Mozilla/5.0 (Linux; Android 6.0; ALE-L21 Build/HuaweiALE-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36" "-"
 31.56.96.51 - - [22/Jan/2019:03:56:16 +0330] "GET /image/61474/productModel/200x200 HTTP/1.1" 200 5379 "https://www.zanbil.ir/m/filter/b113" "Mozilla/5.0 (Linux; Android 6.0; ALE-L21 Build/HuaweiALE-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36" "-"
 40.77.167.129 - - [22/Jan/2019:03:56:17 +0330] "GET /image/14925/productModel/100x100 HTTP/1.1" 200 1696 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
@@ -18,8 +17,7 @@ logfile = """
 91.99.72.15 - - [22/Jan/2019:03:56:19 +0330] "GET /product/10075/13903/%D9%85%D8%A7%DB%8C%DA%A9%D8%B1%D9%88%D9%81%D8%B1-%D8%B1%D9%88%D9%85%DB%8C%D8%B2%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF-%D9%85%D8%AF%D9%84-CE288 HTTP/1.1" 200 41725 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36" "-"
 40.77.167.129 - - [22/Jan/2019:03:56:19 +0330] "GET /image/6229/productModel/150x150 HTTP/1.1" 200 2739 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
 207.46.13.136 - - [22/Jan/2019:03:56:19 +0330] "GET /product/14926 HTTP/1.1" 404 33617 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
-40.77.167.129 - - [22/Jan/2019:03:56:19 +0330] "GET /image/6248/productModel/150x150 HTTP/1.1" 200 2788 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
-""" 
+40.77.167.129 - - [22/Jan/2019:03:56:19 +0330] "GET /image/6248/productModel/150x150 HTTP/1.1" 200 2788 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" - """ 
 
 # Now we need to access these positions by splitting the log first into the differnt lines:
 
@@ -31,10 +29,45 @@ for line in logfile:
 
 
 # Now we can split every single line into into the different colums, and access them individually:
-
+line = 0
 for line in logfile:
     column = line.split()
     print(column)
     print(type(column))
+    print(column[0])
 
 # That create list, now we can all index NO in access individually
+
+# CODE PRACTICE TIME:
+# Now let's suppoes we want to have the sum of all the files sizes in the logfile.
+#column[9]
+line = 0
+filesize = 0
+for line in logfile:
+    column = line.split()
+    
+    if len(column) > 9 and column[9].isdigit():
+        filesize += int(column[9])
+
+print(f"\nSum of the file Size : {filesize}")
+
+
+
+# This code used for specific IP address capture the how many get request and total of request file size
+
+line = 0
+getReq  =  0
+filesize = 0
+ipAddress = "207.46.13.136"
+for line in logfile:
+    column = line.split()
+
+    if len(column) > 9 :
+        if ipAddress == column[0]:
+            if '"GET' == column[5]:
+                if column[9].isdigit():
+                    getReq += 1
+                    filesize += int(column[9])
+    
+
+print(f"[{ipAddress}] ->  total Get Req [{getReq}] , Sum of fileSize [{filesize}]")
