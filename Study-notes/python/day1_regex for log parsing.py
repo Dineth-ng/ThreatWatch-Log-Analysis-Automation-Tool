@@ -20,3 +20,21 @@ logfile = """
 207.46.13.136 - - [22/Jan/2019:03:56:19 +0330] "GET /product/14926 HTTP/1.1" 404 33617 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
 40.77.167.129 - - [22/Jan/2019:03:56:19 +0330] "GET /image/6248/productModel/150x150 HTTP/1.1" 200 2788 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" "-"
 """ 
+
+# Now we need to access these positions by splitting the log first into the differnt lines:
+
+logfile = logfile.split("\n")  # now read the line by line
+
+#check output:
+for line in logfile:
+    print(line)
+
+
+# Now we can split every single line into into the different colums, and access them individually:
+
+for line in logfile:
+    column = line.split()
+    print(column)
+    print(type(column))
+
+# That create list, now we can all index NO in access individually
